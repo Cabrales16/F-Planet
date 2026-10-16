@@ -187,10 +187,10 @@ npm run dev:demo      # abre http://localhost:5173/F-Planet/
 
 ## 🌐 Despliegue
 
-La demo se publica en **GitHub Pages** desde la rama `gh-pages`:
+La demo se publica en **GitHub Pages** con el pipeline de **Jekyll** (`actions/jekyll-build-pages`):
 
-1. Cada push a `main` ejecuta [`deploy-demo.yml`](.github/workflows/deploy-demo.yml): `npm ci` → `lint` → `build:demo` → publica `dist/`.
-2. En **Settings → Pages**, elige *Deploy from a branch* → `gh-pages` / `(root)`.
+1. Cada push a `main` ejecuta [`deploy-demo.yml`](.github/workflows/deploy-demo.yml): `npm ci` → `lint` → `build:demo` → Jekyll entrega `dist/` → `deploy-pages`.
+2. En **Settings → Pages**, elige **Source: GitHub Actions**.
 3. Se usa `HashRouter`, por lo que no hacen falta redirecciones.
 
 > Si renombras el repositorio, actualiza `base` en [`vite.config.js`](vite.config.js).
