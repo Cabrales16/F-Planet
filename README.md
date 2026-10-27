@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/banner.png" alt="F-Planet: app móvil y panel web para ahorrar agua en casa" width="100%">
+
 <img src="public/logo.png" alt="F-Planet" width="120" />
 
 # F-Planet
